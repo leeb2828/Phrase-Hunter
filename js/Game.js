@@ -36,11 +36,11 @@ class Game {
     }
 
     /**
-     * This emthod removes a "life" from the scoreboard, by replacing
+     * This method removes a "life" from the scoreboard, by replacing
      * one of the liveHeart images with a lostHeart image.
      * 
      * Adds one point to the "missed" variable and will call the
-     * gameOver method if the number of missed tries is equal to 5.
+     * gameOver() method if the number of missed tries is equal to 5.
      */
     removeLife() {
         this.missed += 1;
@@ -94,9 +94,9 @@ class Game {
      * For example -> <button class="key">q</button>
      *  
      * If the user, for example, guesses an "a", and there happens to
-     * be one or more a's in the hidden phrase, all of the a characters are
+     * be one or more a's in the hidden phrase, all of the "a" characters are
      * displayed. If not, one life is removed from the scoreboard.
-     * The game will end when the user guesses incorrectly too many times or 
+     * The game will end when the user guesses incorrectly too many times, or 
      * when all the hidden letters are shown.
      */
     handleInteraction(button) {
