@@ -7,6 +7,8 @@ let phrase_obj;
 
 // value is either "You Win" or "You lose"
 let win_or_lose;
+// previously guessed letters
+let previous_guesses = [];
 
 // array of characters found in the current random phrase
 let array_of_characters;
@@ -39,7 +41,8 @@ document.getElementById('qwerty').addEventListener('click', (e) => {
     } else if (game_obj === null) {
         return;
     } 
-    game_obj.handleInteraction(key); 
+    check_prev_letters(key);
+    previous_guesses.push(key.textContent.toLowerCase());
 });
 
 // Event listener for "typed" letter on keyboard
@@ -47,10 +50,18 @@ window.addEventListener("keyup", function(event) {
     if (event.which > 64 && event.which < 91) {
         for (item of all_keys) {
             if (item.textContent === event.key) {
-                game_obj.handleInteraction(item);
+                check_prev_letters(item);
+                previous_guesses.push(String.fromCharCode(event.keyCode).toLowerCase());
             }
         }
     }
     
 });
+
+function check_prev_letters(button) {
+    let letter = button.textContent;
+    if (!previous_guesses.includes(letter)) {
+        game_obj.handleInteraction(button);
+    } 
+}
 

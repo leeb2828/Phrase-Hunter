@@ -69,7 +69,7 @@ class Game {
     }
 
     /**
-     * Resets entire board after the user clicks the "Retry Game" button.
+     * Resets entire board after the user clicks the "Play Another Game Game" button.
      */
     resetEntireBoard() {
         window.location.reload();
@@ -78,14 +78,14 @@ class Game {
     /**
      * @Param A message saying "You Win" or "You lose".
      * This method displays the original start screen, except with
-     * - A "Retry Game" button instead of a "Start Game" button.
+     * - A "Play Another Game" button instead of a "Start Game" button.
      * - A "You win" or "You lose" message.
      */
     gameOver(message) {
         win_or_lose = message;
         document.getElementById('overlay').style.display = "";
-        // "Start Game" button replaced with "Retry Game" button.
-        document.getElementById("btn__reset").textContent = "Retry Game";
+        // "Start Game" button replaced with "Play Another Game Game" button.
+        document.getElementById("btn__reset").textContent = "Play Another Game";
         document.querySelector("h1#game-over-message").textContent = win_or_lose;
     }
 
