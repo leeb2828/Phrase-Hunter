@@ -13,3 +13,5 @@ the scoreboard changes from a "live" heart to a "lost heart".
 
 - The player keeps choosing letters until they reveal all the letters in the
 phrase, or they make five incorrect guesses.
+
+Link to Project: https://leeb2828.github.io/Phrase-Hunter/
