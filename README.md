@@ -1,4 +1,4 @@
-# <center>Phrase-Hunter</center>
+# <center>Phrase-Hunter (OOP Game Show App)</center>
 
 ### Rules of the Game:
 
